@@ -56,6 +56,7 @@ Implemented 100% in **Blueprints**.
 ### NS_Trail (Trail Particle System)
 
 Based on Niagara's `Fountain` template.  
+
 ![Trail Setup](images/img_001.jpg)
 
 **Key modifications:**
@@ -76,6 +77,7 @@ Component `NS_Trail` added under `CollisionComponent`.
 ### NS_Hit (Impact FX)
 
 Based on Niagara's `OmnidirectionalBurst` preset.  
+
 ![Hit Setup](images/img_003.jpg)
 
 **Key modifications:**
@@ -110,6 +112,7 @@ If destruction is triggered: disable `CollisionComponent`, hide the mesh and the
 - Rotation: `Make Rotation From Axes` using `Impact Normal`, with random roll (0–350°)
 - Size: Random Integer 10–30
 - Lifespan: 20s  
+
 ![Random Rotation](images/img_008.jpg)
 
 ---
@@ -119,12 +122,15 @@ If destruction is triggered: disable `CollisionComponent`, hide the mesh and the
 - Materials and Niagara FX receive a unified `Color` parameter
 - A **Dynamic Material Instance** is created per projectile
 - Color is defined in `/Game/FirstPerson/Blueprints/BP_FirstPersonProjectile`
+
 ![Set Color](images/img_009.jpg)
 
 - Color is passed from `/BP_Weapon_Component` during projectile spawn:
+
 ![Spawn with Color](images/img_010.jpg)
 
 - Color change via keyboard input is handled in Weapon Component:
+
 ![Key Input Logic](images/img_011.jpg)
 
 ---
